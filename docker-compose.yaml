@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    environment:
+      SIGN_BUILDS: 'true'
+      SIGNATURE_SPOOFING: restricted
+      BRANCH_NAME: lineage-16.0
+      DEVICE_LIST: pro1
+      INCLUDE_PROPRIETARY: 'true'
+      CUSTOM_PACKAGES: GmsCore GsfProxy FakeStore MozillaNlpBackend NominatimNlpBackend com.google.android.maps.jar FDroid FDroidPrivilegedExtension
+    volumes:
+      - ./src:/root/
+      - ./pro1/repo:/srv/src
+      - ./zips:/srv/zips
+      - ./logs:/srv/logs
+      - ./pro1/cache:/srv/ccache
+      - ./local_manifests:/srv/local_manifests
+      - ./keys:/srv/keys
+

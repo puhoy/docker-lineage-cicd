@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project name="tdm/android_kernel_idealte_msm8998" path="kernel/idealte/msm8998" remote="github" />
+    <project name="tdm/android_device_fxtec_pro1" path="device/fxtec/pro1" remote="github" />
+    <project name="tdm/proprietary_vendor_idealte" path="vendor/idealte" remote="github" />
+    <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="github" />
+</manifest>
